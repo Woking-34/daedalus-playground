@@ -10,6 +10,11 @@ IF(NOT CMAKE_BUILD_TYPE)
     SET(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
 ENDIF()
 
+string(TOUPPER ${CMAKE_CXX_COMPILER_ID} CXX_COMPILER_ID_UPPER)
+IF(${CXX_COMPILER_ID_UPPER} STREQUAL MSVC)
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /MP")
+ENDIF()
+
 add_definitions(-DTIXML_USE_STL)
 add_definitions(-DTW_NO_LIB_PRAGMA -DTW_STATIC)
 
@@ -62,4 +67,5 @@ add_subdirectory(FastMassSpring)
 
 IF(CUDA_FOUND AND WIN32)
 	add_subdirectory(HuaminWang-Chebyshev)
+	add_subdirectory(HuaminWang-DescentMethods)
 ENDIF()

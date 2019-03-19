@@ -1,0 +1,12 @@
+set(CUDA_HYPERELASTIC_ARMADILLO_SRC
+	./CUDA_Hyperelastic_Armadillo/ARMADILLO.h
+	./CUDA_Hyperelastic_Armadillo/OPENGL_DRIVER.h
+	./CUDA_Hyperelastic_Armadillo/kernel.cu
+)
+
+CUDA_ADD_EXECUTABLE(wang_hyperelastic_armadillo ${CUDA_HYPERELASTIC_ARMADILLO_SRC})
+target_link_libraries(wang_hyperelastic_armadillo freeglut)
+target_link_libraries(wang_hyperelastic_armadillo glew)
+target_link_libraries(wang_hyperelastic_armadillo ${CUDA_LIBRARIES})
+
+target_compile_definitions(wang_hyperelastic_armadillo PRIVATE SAMPLE_NAME="HuaminWang-DescentMethods")
