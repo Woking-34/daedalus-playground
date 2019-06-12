@@ -21,4 +21,4 @@ endif()
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_LIST_DIR})
 ADD_LIBRARY( tinyxml STATIC ${SRC_TINYXML} )
-set_target_properties(tinyxml PROPERTIES FOLDER "External Dependencies")
+set_target_properties(tinyxml PROPERTIES FOLDER "_library")

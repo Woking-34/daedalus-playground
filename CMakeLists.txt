@@ -2,34 +2,34 @@ cmake_minimum_required(VERSION 2.6)
 project(Daedalus-Playground)
 
 set( CMAKE_VERBOSE_MAKEFILE ON )
-set_property( GLOBAL PROPERTY USE_FOLDERS ON )
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "_cmake")
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/_bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/daedalus-bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/daedalus-lib)
 
 IF(NOT CMAKE_BUILD_TYPE)
-    SET(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
+    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build type" FORCE)
 ENDIF()
 
 string(TOUPPER ${CMAKE_CXX_COMPILER_ID} CXX_COMPILER_ID_UPPER)
 IF(${CXX_COMPILER_ID_UPPER} STREQUAL MSVC)
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /MP")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj /MP")
 ENDIF()
 
 add_definitions(-DTIXML_USE_STL)
 add_definitions(-DTW_NO_LIB_PRAGMA -DTW_STATIC)
 
 IF(WIN32)
-add_definitions(-DWIN32_LEAN_AND_MEAN)
-add_definitions(-DNOMINMAX)
-add_definitions(-D_USE_MATH_DEFINES)
-
-add_definitions(-DGLEW_STATIC)
-add_definitions(-DFREEGLUT_STATIC)
-add_subdirectory(_libs/freeglut "${CMAKE_CURRENT_BINARY_DIR}/_libs/freeglut")
-
-include_directories(
-	_libs/freeglut
-)
+	add_definitions(-DWIN32_LEAN_AND_MEAN)
+	add_definitions(-DNOMINMAX)
+	add_definitions(-D_USE_MATH_DEFINES)
+	
+	add_definitions(-DGLEW_STATIC)
+	add_definitions(-DFREEGLUT_STATIC)
+	add_subdirectory(_libs/freeglut "${CMAKE_CURRENT_BINARY_DIR}/_libs/freeglut")
+	
+	include_directories(_libs/freeglut)
 ENDIF(WIN32)
 
 add_subdirectory(_libs/glew "${CMAKE_CURRENT_BINARY_DIR}/_libs/glew")

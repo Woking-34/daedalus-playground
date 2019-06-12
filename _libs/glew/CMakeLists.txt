@@ -17,4 +17,4 @@ endif()
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 add_library( glew STATIC ${SRC_GLEW} )
-set_target_properties(glew PROPERTIES FOLDER "External Dependencies")
+set_target_properties(glew PROPERTIES FOLDER "_library")

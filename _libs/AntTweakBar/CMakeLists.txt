@@ -62,7 +62,7 @@ endif()
 include_directories(include)
 
 add_library(AntTweakBar STATIC ${ATB_HEADERS} ${ATB_SOURCES})
-set_target_properties(AntTweakBar PROPERTIES FOLDER "External Dependencies")
+set_target_properties(AntTweakBar PROPERTIES FOLDER "_library")
 
 if (APPLE)
     target_link_libraries(AntTweakBar) 

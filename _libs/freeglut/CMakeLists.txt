@@ -45,4 +45,4 @@ endif()
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 add_library( freeglut STATIC ${SRC_FREEGLUT} ${DEF_FILE} )
-set_target_properties(freeglut PROPERTIES FOLDER "External Dependencies")
+set_target_properties(freeglut PROPERTIES FOLDER "_library")

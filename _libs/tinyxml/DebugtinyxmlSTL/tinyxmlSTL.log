@@ -1,8 +1,0 @@
-﻿  tinyxmlparser.cpp
-  tinyxmlerror.cpp
-  tinyxml.cpp
-c:\users\nyerscorp\desktop\code_cmake\_libs\tinyxml\tinyxml.cpp(670): warning C4458: declaration of 'value' hides class member
-  c:\users\nyerscorp\desktop\code_cmake\_libs\tinyxml\tinyxml.h(761): note: see declaration of 'TiXmlNode::value'
-  tinystr.cpp
-  Generating Code...
-  tinyxmlSTL.vcxproj -> C:\Users\NyersCorp\Desktop\code_cmake\_libs\tinyxml\DebugtinyxmlSTL\tinyxmlSTL.lib
