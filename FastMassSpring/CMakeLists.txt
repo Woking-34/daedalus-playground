@@ -34,6 +34,8 @@ SET(SRC_FAST_MASS_SPRING
 )
 
 add_executable(fastmassspring ${SRC_FAST_MASS_SPRING})
+target_include_directories(fastmassspring PRIVATE ${PROJECT_SOURCE_DIR}/_libs/eigen)
+target_include_directories(fastmassspring PRIVATE ${PROJECT_SOURCE_DIR}/_libs/eigen/Eigen)
 
 IF(WIN32)
 target_link_libraries(fastmassspring freeglut)

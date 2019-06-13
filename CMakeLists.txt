@@ -45,9 +45,6 @@ include_directories(
 	_libs/tinyxml
 	_libs/bullet
 	_libs/glm
-
-	_libs/eigen
-	_libs/eigen/Eigen
 )
 
 find_package(CUDA)
@@ -66,6 +63,7 @@ ENDIF()
 add_subdirectory(Bruneton-Ocean)
 add_subdirectory(Dupuy-Whitecaps)
 add_subdirectory(MilesMacklin-Sandbox)
+add_subdirectory(WenzelJakob-Fluid)
 add_subdirectory(FastMassSpring)
 
 add_subdirectory(BulletPhysics-Cloth)
