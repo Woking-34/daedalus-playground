@@ -35,6 +35,7 @@ ENDIF(WIN32)
 add_subdirectory(_libs/glew "${CMAKE_CURRENT_BINARY_DIR}/_libs/glew")
 add_subdirectory(_libs/AntTweakBar "${CMAKE_CURRENT_BINARY_DIR}/_libs/AntTweakBar")
 add_subdirectory(_libs/tinyxml "${CMAKE_CURRENT_BINARY_DIR}/_libs/tinyxml")
+add_subdirectory(_libs/bullet "${CMAKE_CURRENT_BINARY_DIR}/_libs/bullet")
 
 include_directories(
 	.
@@ -42,6 +43,7 @@ include_directories(
 	_libs/glew
 	_libs/AntTweakBar/include
 	_libs/tinyxml
+	_libs/bullet
 	_libs/glm
 
 	_libs/eigen
@@ -64,6 +66,9 @@ ENDIF()
 add_subdirectory(Bruneton-Ocean)
 add_subdirectory(Dupuy-Whitecaps)
 add_subdirectory(FastMassSpring)
+
+add_subdirectory(BulletPhysics-Cloth)
+add_subdirectory(BulletPhysics-PrimitiveShapes)
 
 IF(CUDA_FOUND AND WIN32)
 	add_subdirectory(HuaminWang-Chebyshev)
