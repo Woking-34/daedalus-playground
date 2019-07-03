@@ -37,6 +37,12 @@ add_subdirectory(_libs/AntTweakBar "${CMAKE_CURRENT_BINARY_DIR}/_libs/AntTweakBa
 add_subdirectory(_libs/tinyxml "${CMAKE_CURRENT_BINARY_DIR}/_libs/tinyxml")
 add_subdirectory(_libs/bullet "${CMAKE_CURRENT_BINARY_DIR}/_libs/bullet")
 
+set(GLFW_INSTALL OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+add_subdirectory(_libs/glfw "${CMAKE_CURRENT_BINARY_DIR}/_libs/glfw")
+
 include_directories(
 	.
 
@@ -45,6 +51,7 @@ include_directories(
 	_libs/tinyxml
 	_libs/bullet
 	_libs/glm
+	_libs/glfw/include
 )
 
 find_package(CUDA)
