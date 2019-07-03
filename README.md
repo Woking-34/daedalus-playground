@@ -20,6 +20,9 @@ Collection of open source OpenGL demos, graphics prototypes and physics sims. Th
 ## Cuda Fluid and Particles Plugins - Vincent Houze (Windows only) - [Project site](https://vincenthouze.com/portfolio/cuda-fluid-and-particles-plugins/)
 <p align="center"><img src="VincentHouze-Fluid/Preview/vincenthouze_fluid.jpg" width="600" /></p>
 
+## Ray Tracing Gems - Volume Path Tracer - [Project site](https://github.com/Apress/ray-tracing-gems/tree/master/Ch_28_Ray_Tracing_Inhomogeneous_Volumes/)
+<p align="center"><img src="RayTracingGems-VolumePT/preview/raytracinggems_volumept.jpg" width="600" /></p>
+
 ## Bullet Physics Samples - Krishna Kumar
 <p align="center"><img src="BulletPhysics-PrimitiveShapes/preview/bullet_primitiveshapes.jpg" width="600" /></p>
 <p align="center"><img src="BulletPhysics-Cloth/preview/bullet_cloth.jpg" width="600" /></p>
