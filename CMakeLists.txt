@@ -33,6 +33,7 @@ IF(WIN32)
 ENDIF(WIN32)
 
 add_subdirectory(_libs/glew "${CMAKE_CURRENT_BINARY_DIR}/_libs/glew")
+add_subdirectory(_libs/imgui "${CMAKE_CURRENT_BINARY_DIR}/_libs/imgui")
 add_subdirectory(_libs/AntTweakBar "${CMAKE_CURRENT_BINARY_DIR}/_libs/AntTweakBar")
 add_subdirectory(_libs/tinyxml "${CMAKE_CURRENT_BINARY_DIR}/_libs/tinyxml")
 add_subdirectory(_libs/bullet "${CMAKE_CURRENT_BINARY_DIR}/_libs/bullet")
@@ -47,6 +48,7 @@ include_directories(
 	.
 
 	_libs/glew
+	_libs/imgui
 	_libs/AntTweakBar/include
 	_libs/tinyxml
 	_libs/bullet
@@ -82,3 +84,6 @@ IF(CUDA_FOUND AND WIN32)
 	add_subdirectory(VincentHouze-Fluid)
 	add_subdirectory(RayTracingGems-VolumePT)
 ENDIF()
+
+#add_subdirectory(ImGui-GLUT)
+#add_subdirectory(ImGui-GLFW)
