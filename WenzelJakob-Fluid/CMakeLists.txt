@@ -20,7 +20,7 @@ if(Boost_FOUND)
 	target_link_libraries(wenzeljakob_fluid freeglut)
 	ENDIF(WIN32)
 	IF(UNIX AND NOT APPLE)
-	target_link_libraries(wenzeljakob_fluid glut GL)
+	target_link_libraries(wenzeljakob_fluid glut GLU GL)
 	ENDIF(UNIX AND NOT APPLE)
 	
 	IF(WIN32)
