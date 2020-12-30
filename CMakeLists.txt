@@ -71,6 +71,7 @@ ENDIF()
 
 add_subdirectory(Bruneton-Ocean)
 add_subdirectory(Dupuy-Whitecaps)
+add_subdirectory(TDHoang-MRSSAO)
 add_subdirectory(MilesMacklin-Sandbox)
 add_subdirectory(WenzelJakob-Fluid)
 add_subdirectory(FastMassSpring)
