@@ -127,7 +127,7 @@ Mesh* ImportMeshFromPly(const char* path)
 			else
 			{
 				printf("Ply: unknown format\n");
-				return false;
+				return NULL;
 			}
         }
         else if (strcmp(buffer, "property") == 0)

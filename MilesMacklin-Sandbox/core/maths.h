@@ -124,6 +124,14 @@ CUDA_CALLABLE inline T Max(T a, T b)
 	return a > b ? a : b;
 }
 
+template <typename T> 
+CUDA_CALLABLE inline void Swap(T& a, T& b)
+{
+	T tmp = a;
+	a = b;
+	b = tmp;
+}
+
 template <typename T>
 CUDA_CALLABLE inline T Clamp(T a, T low, T high)
 {
@@ -137,14 +145,6 @@ template <typename V, typename T>
 CUDA_CALLABLE inline V Lerp(const V& start, const V& end, const T& t)
 {
 	return start + (end-start)*t;
-}
-
-template <typename T> 
-CUDA_CALLABLE inline void Swap(T& a, T& b)
-{
-	T tmp = a;
-	a = b;
-	b = tmp;
 }
 
 CUDA_CALLABLE inline float InvSqrt(float x)

@@ -14,6 +14,7 @@
 #include "types.h"
 
 #if !PLATFORM_SPU && !PLATFORM_OPENCL
+#include <cstring>
 #include <string>
 #include <iostream>
 #include <fstream>
