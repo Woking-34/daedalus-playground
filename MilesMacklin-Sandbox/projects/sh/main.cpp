@@ -469,9 +469,10 @@ int main(int argc, char* argv[])
 	glutCreateWindow("SHTest");
 	glutPositionWindow(200, 100);
 
-#if _WIN32
-	glewInit();
-#endif
+
+        glewExperimental = GL_TRUE;
+        glewInit();
+
 
 	g_shader = CompileProgram(vertexShader, fragmentShader);
 	if (g_shader == 0)

@@ -861,13 +861,13 @@ void DrawParticles(const std::vector<Particle>& particles)
 
 void InitShaders()
 {
-    std::string filePath0 = "RayMarchVolumeVS.glsl";
+    std::string filePath0 = "raymarchvolumevs.glsl";
     bool fileFound0 = findFullPath(std::string(SAMPLE_NAME) + "/data/smoke/", filePath0);
 
-    std::string filePath1 = "RayMarchVolumePS.glsl";
+    std::string filePath1 = "raymarchvolumeps.glsl";
     bool fileFound1 = findFullPath(std::string(SAMPLE_NAME) + "/data/smoke/", filePath1);
 
-    std::string filePath2 = "RayMarchShadowPS.glsl";
+    std::string filePath2 = "raymarchshadowps.glsl";
     bool fileFound2 = findFullPath(std::string(SAMPLE_NAME) + "/data/smoke/", filePath2);
 
 	g_volumeShader = CompileProgramFromFile(filePath0.c_str(), filePath1.c_str());
@@ -1161,9 +1161,8 @@ int main(int argc, char* argv[])
 	glutCreateWindow("Fluid3D");
 	glutPositionWindow(350, 100);
 	
-#if WIN32
-	glewInit();
-#endif
+        glewExperimental = GL_TRUE;
+        glewInit();
 
 	Init();
 	
