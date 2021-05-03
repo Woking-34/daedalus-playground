@@ -138,7 +138,7 @@ __global__ void integrateParticlesKernel(float3* pos, float3* vel, float* age, f
 		float ageNorm = age[n]/life[n];
 
 		float3 col = lerp(col1,col2,ageNorm);
-		float alpha = opacity*(1-pow(age[n]/life[n],2));
+		float alpha = opacity*(1-powf(age[n]/life[n],2));
 
 		colour[n] = make_float4(col.x,col.y,col.z,alpha);
 
