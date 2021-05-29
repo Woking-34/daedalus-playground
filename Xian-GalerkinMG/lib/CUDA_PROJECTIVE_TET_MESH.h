@@ -2391,7 +2391,18 @@ public:
 			{
 				return o.st.first < st.first;
 			}
+
+			inline shortestPathType& operator=(const shortestPathType& o)
+			{
+				st.first = o.st.first;
+				st.second = o.st.second;
+
+				what = o.what;
+
+				return *this;
+			}
 		};
+
 		std::priority_queue<shortestPathType> pq;
 		pq.push(shortestPathType{ shortestType{ 0,v },v });
 		while (!pq.empty())
